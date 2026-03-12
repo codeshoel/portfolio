@@ -16,7 +16,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #09090b;
+  --foreground: #1B2335;
   --accent: #4338ca; /* Vibrant Indigo */
   --text-muted: #52525b;
   --surface: #fcfcfc;
@@ -24,12 +24,12 @@
 }
 
 .dark {
-  --background: #09090b;
+  --background: #1B2335;
   --foreground: #f4f4f5;
   --accent: #818cf8;
   --text-muted: #a1a1aa;
-  --surface: #18181b;
-  --border-main: rgba(244, 244, 245, 0.1);
+  --surface: #2a3552;
+  --border-main: rgba(255, 255, 255, 0.1);
 }
 
 * {

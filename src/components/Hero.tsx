@@ -26,13 +26,40 @@ const Hero = () => {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            initial="hidden"
+            animate="visible"
             className="text-5xl md:text-7xl font-bold tracking-tight mb-8 text-gradient leading-[1.1]"
           >
-            Gabriel Jacob. <br />
-            Full Stack Developer.
+            {Array.from("Gabriel Jacob.").map((char, i) => (
+              <motion.span
+                key={i}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 }
+                }}
+                transition={{ duration: 0.05, delay: i * 0.05 + 0.1 }}
+              >
+                {char}
+              </motion.span>
+            ))}
+            <br />
+            {Array.from("Full Stack Developer.").map((char, i) => (
+              <motion.span
+                key={i}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 }
+                }}
+                transition={{ duration: 0.05, delay: (i + 14) * 0.05 + 0.1 }}
+              >
+                {char}
+              </motion.span>
+            ))}
+            <motion.span
+              animate={{ opacity: [1, 0] }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+              className="inline-block w-[3px] h-[0.9em] bg-accent ml-1 translate-y-[0.1em]"
+            />
           </motion.h1>
 
           <motion.p

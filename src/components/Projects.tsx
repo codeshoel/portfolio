@@ -84,7 +84,7 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ const Projects = () => {
             className="card group"
           >
             <div className="flex justify-between items-start mb-6">
-              <div className="p-3 bg-accent/5 text-accent rounded-xl group-hover:bg-accent group-hover:text-white transition-colors">
+              <div className="p-3 bg-accent/5 text-accent rounded-xl group-hover:bg-accent group-hover:text-background transition-colors">
                 <project.icon size={24} strokeWidth={1.5} />
               </div>
               <div className="flex gap-4 items-center">
@@ -111,22 +111,22 @@ const Projects = () => {
                 )}
               </div>
             </div>
-            
+
             <div className="space-y-4">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-accent/80">{project.type}</span>
                 <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors mt-1">{project.title}</h3>
                 <p className="text-xs font-medium text-text-muted/70">{project.subtitle}</p>
               </div>
-              
+
               <p className="text-sm text-text-muted leading-relaxed">
                 {project.description}
               </p>
-              
+
               <div className="flex flex-wrap gap-2 pt-2">
                 {project.stack.map((tech, techIndex) => (
-                  <span 
-                    key={techIndex} 
+                  <span
+                    key={techIndex}
                     className="badge badge-outline text-[10px]"
                   >
                     {tech}
