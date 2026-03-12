@@ -26,18 +26,18 @@ export default function Home() {
             <a href="#projects" className="text-sm font-semibold text-text-muted hover:text-foreground">Projects</a>
             <div className="flex items-center gap-4">
               <ThemeToggle />
-              <a 
-                href="https://github.com/codeshoel" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://github.com/codeshoel"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-text-muted hover:text-foreground transition-colors"
                 aria-label="GitHub"
               >
                 <Github size={20} />
               </a>
             </div>
-            <a 
-              href="mailto:softmaktech@gmail.com" 
+            <a
+              href="mailto:softmaktech@gmail.com"
               className="btn-primary text-sm"
             >
               Contact
@@ -48,11 +48,11 @@ export default function Home() {
 
       <Hero />
       <div className="space-y-0">
+        <Projects />
         <About />
         <Skills />
         <Experience />
         <Education />
-        <Projects />
         <Personal />
       </div>
       <Footer />
